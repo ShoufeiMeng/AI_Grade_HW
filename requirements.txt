@@ -1,21 +1,33 @@
-# Core app
-streamlit==1.35.0
+# Core app packages
+streamlit==1.33.0
+openai==1.16.2
+langchain==0.1.15
+langchain-core==0.1.41
+langchain-community==0.0.32
+langchain-openai==0.1.2
 
-# LangChain components
-langchain==0.1.14
-langchain-community==0.0.34
-langchain-openai==0.1.6
-langchain-text-splitters==0.0.1
+# Language model support
+pydantic==1.10.13  # Downgraded for compatibility with langchain
+requests==2.31.0
+urllib3==2.2.1
+tenacity==8.2.3
+markdown-it-py==3.0.0
+mdurl==0.1.2
+packaging==23.2
+tqdm==4.66.2
+typing_extensions==4.11.0
+toolz==0.12.1
 
-# OpenAI models
-openai==1.30.1
+# Data processing
+pandas==2.2.1
+numpy==1.26.4
 
-# PDF loading
-pypdf==4.2.0
+# Streamlit rendering / console styling
+rich==12.6.0  # More stable with Streamlit
 
-# Vector store
-faiss-cpu==1.7.4
+# Optional packages — enable only if needed
+# faiss-cpu==1.8.0     # For vector search (may fail on Streamlit Cloud)
+# pyarrow==14.0.1      # Only needed for working with Arrow or Parquet formats
 
-# Other
-tqdm
-python-dotenv
+# Other utility packages are automatically installed with langchain
+# e.g., dataclasses-json, aiohttp
