@@ -1,13 +1,14 @@
 # Core app packages
 streamlit==1.33.0
 openai==1.16.2
+
 langchain==0.1.15
-langchain-core==0.1.41
-langchain-community==0.0.32
+langchain-core==0.1.46
+langchain-community==0.0.37
 langchain-openai==0.1.2
 
 # Language model support
-pydantic==1.10.13  # Downgraded for compatibility with langchain
+pydantic==1.10.13
 requests==2.31.0
 urllib3==2.2.1
 tenacity==8.2.3
@@ -23,11 +24,9 @@ pandas==2.2.1
 numpy==1.26.4
 
 # Streamlit rendering / console styling
-rich==12.6.0  # More stable with Streamlit
+rich==13.3.5
 
-# Optional packages — enable only if needed
-# faiss-cpu==1.8.0     # For vector search (may fail on Streamlit Cloud)
-# pyarrow==14.0.1      # Only needed for working with Arrow or Parquet formats
+# Optional packages
+# faiss-cpu==1.8.0
+# pyarrow==14.0.1
 
-# Other utility packages are automatically installed with langchain
-# e.g., dataclasses-json, aiohttp
